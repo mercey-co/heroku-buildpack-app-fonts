@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
 
-echo "App Fonts"
-exit 0
+if [ -z "$CNB_STACK_ID" ]; then
+  # v2 API
+  cd $1
+fi
+
+if [ -d app/assets/stylesheets/fonts ]; then
+  echo "App Fonts"
+  exit 0
+else
+  exit 100
+fi
