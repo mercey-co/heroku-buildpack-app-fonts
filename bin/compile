@@ -2,5 +2,7 @@
 
 dir=/app/.fonts
 mkdir -p $dir
-cp /app/app/assets/stylesheets/fonts/*.ttf $dir/
+find /app/app/assets/stylesheets/fonts \
+  \( -name '*.ttf' -o -name '*.woff*' \) \
+  -exec cp {} $dir/ \;
 fc-cache -f
