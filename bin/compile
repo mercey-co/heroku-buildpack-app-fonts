@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+dir=/app/.fonts
+mkdir -p $dir
+cp /app/app/assets/stylesheets/fonts/*.ttf $dir/
+fc-cache -f

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "App Fonts"
+exit 0
