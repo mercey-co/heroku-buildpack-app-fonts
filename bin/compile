@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-dir=/app/.fonts
-mkdir -p $dir
-find /app/app/assets/stylesheets/fonts \
+cd $1
+tgt=.fonts
+
+mkdir -p $tgt
+find app/assets/stylesheets/fonts \
   \( -name '*.ttf' -o -name '*.woff*' \) \
-  -exec cp {} $dir/ \;
+  -exec cp {} $tgt/ \;
+
 fc-cache -f
