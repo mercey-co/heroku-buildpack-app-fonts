@@ -5,7 +5,7 @@ tgt=.fonts
 
 mkdir -p $tgt
 find ${FONTS_DIR-app/assets/fonts} \
-  \( -name '*.ttf' -o -name '*.woff*' \) \
+  \( -name '*.ttf' -o -name '*.otf' \) \
   -exec cp {} $tgt/ \;
 
 fc-cache -f
